@@ -94,7 +94,7 @@ return (
                     <Checkbox.Root key={task.id} size="sm" p="20px" checked={task.done} onChange={() => handleChecked(task.id)} borderRadius="full" colorPalette="purple">
                       <Checkbox.HiddenInput />
                       <Checkbox.Control />
-                      <Checkbox.Label fontSize="16px" color={task.done ? "gray.400" : "gray.700"} textDecoration={task.done ? "line-through" : "none"}>{task.title}</Checkbox.Label>
+                      <Checkbox.Label fontSize="16px" color={task.done ? "gray.400" : {base: "white", _dark:"gray.700"}} textDecoration={task.done ? "line-through" : "none"}>{task.title}</Checkbox.Label>
                     </Checkbox.Root>
                   <Separator borderColor="gray.200" size="sm"/>
                   </>
