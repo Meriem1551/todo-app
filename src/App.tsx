@@ -85,6 +85,7 @@ return (
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           />
+          {tasks.length > 0 ?
           <Grid bgColor={{base: "gray.700", _dark:"white"}} borderRadius="md"  boxShadow="md">
             <Box as="ul">
               {tasks.map((task) => {
@@ -109,7 +110,7 @@ return (
               <Spacer/>
               <Button fontSize={{base:"12px", md:"14px"}} color={{base: "white", _dark:"gray.500"}} bgColor="transparent"  _hover={{color:"blue.emphasized"}} onClick={handleClear}>Clear Completed</Button>
             </Flex>
-          </Grid>
+          </Grid> : <p>No tasks for no, yay!!!</p>}
       </Grid>
     </Box>
   )
